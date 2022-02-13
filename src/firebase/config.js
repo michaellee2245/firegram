@@ -1,7 +1,7 @@
  // Import the functions you need from the SDKs you need
   // import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.6/firebase-app.js";
   import { initializeApp } from "firebase/app";
-  import { getFirestore } from 'firebase/firestore';
+  import { getFirestore, collection } from 'firebase/firestore';
   import { getStorage } from 'firebase/storage';
   //import * as firebase from 'firebase/app';
 
@@ -23,5 +23,8 @@
   const projectStorage = getStorage();
   const projectFirestore = getFirestore();
 
+  //Collection Reference
+  const collectionRef = collection(projectFirestore, 'images')
 
-  export { projectStorage, projectFirestore };
+
+  export { projectStorage, projectFirestore, collectionRef };
